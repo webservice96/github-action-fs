@@ -11,7 +11,8 @@ describe("GET /", ()=>{
             .get('/')
             .expect(200)
             .then((res)=>{
-                expect(res.text).to.equal("Hello World!")
+                expect(res.body.message).to.equal("Hello World!")
+                // expect(res.text).to.equal("Hello World!")
             })
     })
 })
